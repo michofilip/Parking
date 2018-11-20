@@ -62,7 +62,7 @@ public class TicketFakeRepository {
     public List<Ticket> findByDate(LocalDate date) {
         List<Ticket> result = new ArrayList<>();
         for (Ticket ticket : tickets) {
-            if (ticket.getEnd().toLocalDate().equals(date)) {
+            if (ticket.getEnd() != null && ticket.getEnd().toLocalDate().equals(date)) {
                 result.add(ticket);
             }
         }
