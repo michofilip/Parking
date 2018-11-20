@@ -1,7 +1,7 @@
 package com.example.Parking.service.price;
 
 import com.example.Parking.model.Ticket;
-import com.example.Parking.repository.CurrencyRepository;
+import com.example.Parking.repository.CurrencyFakeRepository;
 import com.example.Parking.service.currency.CurrencyExchanger;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import java.time.Duration;
 @AllArgsConstructor
 public class PriceCalculator {
 
-    private CurrencyRepository currencyRepository;
+    private CurrencyFakeRepository currencyRepository;
 
     public BigDecimal calculate(Ticket ticket) {
         int hours = calculateHours(ticket);

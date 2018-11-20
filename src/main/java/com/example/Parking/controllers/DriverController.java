@@ -3,8 +3,8 @@ package com.example.Parking.controllers;
 import com.example.Parking.exceptions.*;
 import com.example.Parking.model.Currency;
 import com.example.Parking.model.Ticket;
-import com.example.Parking.repository.CurrencyRepository;
-import com.example.Parking.repository.TicketRepository;
+import com.example.Parking.repository.CurrencyFakeRepository;
+import com.example.Parking.repository.TicketFakeRepository;
 import com.example.Parking.requests.BeginParkingRequest;
 import com.example.Parking.requests.EndParkingRequest;
 import com.example.Parking.responses.BeginParkingResponse;
@@ -21,8 +21,8 @@ import java.time.LocalDateTime;
 @RequestMapping("/driver")
 public class DriverController {
 
-    private TicketRepository ticketRepository;
-    private CurrencyRepository currencyRepository;
+    private TicketFakeRepository ticketRepository;
+    private CurrencyFakeRepository currencyRepository;
     private PriceCalculator priceCalculator;
 
     @PostMapping("/start")

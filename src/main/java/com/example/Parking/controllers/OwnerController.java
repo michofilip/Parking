@@ -5,8 +5,8 @@ import com.example.Parking.exceptions.UnknownCurrencyException;
 import com.example.Parking.exceptions.UnknownTickedIdException;
 import com.example.Parking.model.Currency;
 import com.example.Parking.model.Ticket;
-import com.example.Parking.repository.CurrencyRepository;
-import com.example.Parking.repository.TicketRepository;
+import com.example.Parking.repository.CurrencyFakeRepository;
+import com.example.Parking.repository.TicketFakeRepository;
 import com.example.Parking.requests.ReportRequest;
 import com.example.Parking.responses.ErrorResponse;
 import com.example.Parking.responses.ReportResponse;
@@ -22,8 +22,8 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/owner")
 public class OwnerController {
-    private TicketRepository ticketRepository;
-    private CurrencyRepository currencyRepository;
+    private TicketFakeRepository ticketRepository;
+    private CurrencyFakeRepository currencyRepository;
 
     @PostMapping("/report")
     public ReportResponse report(@RequestBody ReportRequest reportRequest) throws IncorrectReportRequestException, UnknownCurrencyException {
